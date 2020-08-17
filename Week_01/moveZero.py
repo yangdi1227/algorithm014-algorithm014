@@ -20,8 +20,8 @@ def main():
     for i in xrange(0, len(array_src)):
         if array_src[i] != 0:
             array_src[j] = array_src[i]
-            # if i != j:
-            #     array_src[i] = 0
+            if i != j:
+                array_src[i] = 0
             j += 1
         print array_src
 

@@ -15,7 +15,7 @@ __author__ = 'deanyang'
 
 class Solution(object):
     def twoSum1(self, nums, target):
-        #暴力法
+        # 暴力法
         """
         :type nums: List[int]
         :type target: int
@@ -27,6 +27,7 @@ class Solution(object):
             for j in xrange(i + 1, len(nums)):
                 if nums[i] + nums[j] == target:
                     return i, j
+
     def twoSum2(self, nums, target):
         if len(nums) < 2:
             return []
@@ -36,8 +37,16 @@ class Solution(object):
                 return [hashSet.get(target - nums[i]), i]
             hashSet[nums[i]] = i
 
+    def twoSum3(self, nums, target):
+        d = dict()
+        for index, num in enumerate(nums):
+            if d.get(num) == None:
+                d[target - num] = index
+            else:
+                return [d.get(num), index]
+
 
 if __name__ == "__main__":
     nums = [2, 7, 11, 15]
     a = Solution()
-    print a.twoSum2(nums, 9)
+    print a.twoSum3(nums, 9)

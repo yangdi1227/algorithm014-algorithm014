@@ -47,6 +47,6 @@ class Solution(object):
 
 
 if __name__ == "__main__":
-    nums = [2, 7, 11, 15]
+    nums = [2, 8, 11, 15]
     a = Solution()
     print a.twoSum3(nums, 9)

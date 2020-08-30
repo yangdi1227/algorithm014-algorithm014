@@ -19,6 +19,7 @@ class Solution(object):
             # if the combination is done
             if len(curr) == k:
                 output.append(curr[:])
+                return
             for i in range(first, n + 1):
                 # add i into the current combination
                 curr.append(i)

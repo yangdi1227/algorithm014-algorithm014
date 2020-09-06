@@ -13,7 +13,7 @@
 __author__ = 'deanyang'
 
 
-class Solution(object): #aw
+class Solution(object):  # aw
     def lemonadeChange(self, bills):
         five = ten = 0
         for bill in bills:
@@ -31,10 +31,11 @@ class Solution(object): #aw
                     five -= 3
                 else:
                     return False
-        print five,ten
+        print five, ten
         return True
 
+
 if __name__ == "__main__":
-     change = [5,5,5,15]
-     a = Solution()
-     print a.lemonadeChange(change)
+    change = [5, 5, 5, 15]
+    a = Solution()
+    print a.lemonadeChange(change)
